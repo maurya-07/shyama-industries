@@ -110,7 +110,7 @@ header {
 	font-weight: bold;
 	text-align: center;
 	border-radius: 1rem;
-	color: var(--foreground);
+	color: var(--background);
 	background-color: var(--foreground);
 	box-shadow: 0rem 0rem 5rem var(--black-opacity);
 	overflow: hidden;
