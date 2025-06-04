@@ -6,7 +6,18 @@ import './index.css';
 
 const App = () => {
 
-  // Demo changes
+  // MENU
+  const toggleMenu = () => {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.toggle("show");
+  };
+
+  const closeMenu = () => {
+    const menu = document.getElementById("dropdownMenu");
+    menu.classList.remove("show");
+  };
+
+  // PRODUCTS
   const productList = [
     {
       title: "Helmet",
@@ -67,11 +78,26 @@ const App = () => {
           <a href="#contact">Contact Us</a>
         </nav>
 
-        {/* Contact Button */}
-        <button className="contact___btn">
-          Whatsapp
-        </button>
+        <div className="flex gap-[1rem]">
+          {/* Contact Button */}
+          <button className="contact___btn">
+            Whatsapp
+          </button>
+
+          {/* HAMBURGER MENU */}
+          <div className="top___bar hidden items-center">
+            <i className="fa-solid fa-bars cursor-pointer text-[1.1rem]" onClick={toggleMenu}></i>
+          </div>
+        </div>
       </header>
+
+      {/* =============== TOP BAR =============== */}
+      <div className="dropdown___menu" id="dropdownMenu">
+        <a href="#home" onClick={closeMenu}>Home</a>
+        <a href="#about" onClick={closeMenu}>Abou Us</a>
+        <a href="#products" onClick={closeMenu}>Products</a>
+        <a href="#contact" onClick={closeMenu}>Contact Us</a>
+      </div>
 
       {/* =============== HOME =============== */}
       <section className="home___section" id="home">
@@ -82,6 +108,7 @@ const App = () => {
             <p>
               Our safety and protection tools ensure your construction site meets the highest standards. From helmets to fencing and monitoring equipment, we've got you covered.
             </p>
+
 
             {/* Contact Button */}
             <button className="home___btn">
@@ -163,7 +190,6 @@ const App = () => {
               width="100%"
               height="300"
               style={{ border: 0 }}
-              // allowFullScreen=""
               loading="lazy"
             ></iframe>
           </div>
