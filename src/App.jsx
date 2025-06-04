@@ -10,27 +10,42 @@ const App = () => {
     {
       title: "Helmet",
       desc: "Protects your head from falling objects and impact.",
-      image: "https://cdn-icons-png.flaticon.com/512/3177/3177440.png",
+      image: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQzyqYQdYyWfAwNZbac1UlA8Z9gj9eHirFmY5eQ55tylxsC5EsvH8yZaTIVvn2kzPsnSUnAhTAdHLjIX_qlF9B7FC2J2NNhY4MiOcFnoh8fvlSwl7G1TEjc",
     },
     {
       title: "Vest",
       desc: "Increases visibility for workers on-site.",
-      image: "https://cdn-icons-png.flaticon.com/512/3657/3657195.png",
+      image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTqEhYOOR0iP8_JhzGP_RTwyo6zYYHLR00Rb8C1rAJvwe9BecJE-dFronLXtHiajMMuUAAwzIZ_wnj7FY2Cncd_T7MCAjPJDGJOt4CkR5qoXWdmvWfjj_Eu",
     },
     {
       title: "Boots",
       desc: "Protects feet from sharp objects and heavy materials.",
-      image: "https://cdn-icons-png.flaticon.com/512/9742/9742581.png",
+      image: "https://hi-tec.com/cdn/shop/products/CADE7INWORKBOOT_CH80044M_T_1_352aad81-cd1d-4c89-819d-163204b29036.jpg?v=1676301995&width=2700",
     },
     {
       title: "Mask",
       desc: "Prevents inhalation of harmful dust and particles.",
-      image: "https://cdn-icons-png.flaticon.com/512/3375/3375485.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpzao-_yzVM2fZpS90FN_kaq1xvYGQhRr7vw&s",
     },
     {
       title: "Gloves",
       desc: "Guards hands from cuts, chemicals, and abrasions.",
-      image: "https://cdn-icons-png.flaticon.com/512/599/599305.png",
+      image: "https://firmgrip.com/cdn/shop/files/65242_Main_Product.jpg?v=1725372908",
+    },
+    {
+      title: "Rope",
+      desc: "Guards hands from cuts, chemicals, and abrasions.",
+      image: "https://5.imimg.com/data5/SELLER/Default/2021/7/TR/KU/QS/32410977/plastic-blue-rope-500x500.jpg",
+    },
+    {
+      title: "Rope",
+      desc: "Guards hands from cuts, chemicals, and abrasions.",
+      image: "https://5.imimg.com/data5/SELLER/Default/2021/7/TR/KU/QS/32410977/plastic-blue-rope-500x500.jpg",
+    },
+    {
+      title: "Rope",
+      desc: "Guards hands from cuts, chemicals, and abrasions.",
+      image: "https://5.imimg.com/data5/SELLER/Default/2021/7/TR/KU/QS/32410977/plastic-blue-rope-500x500.jpg",
     },
   ];
 
@@ -39,7 +54,7 @@ const App = () => {
     <div>
 
       {/* =============== HEADER =============== */}
-      <header className="header">
+      <header>
         {/* Logo */}
         <div className="logo">MyLogo</div>
 
@@ -108,15 +123,20 @@ const App = () => {
         <h2 className="products___heading">Products</h2>
 
         <div className="products___list">
+
           {productList.map((item, index) => (
-            <div className="product-card" key={index}>
-              <img src={item.image} alt={item.title} className="product-img" />
+            <div className="product___card" key={index}>
+              <img src={item.image} alt={item.title} className="product___img" />
+
               <div>
                 <h3>{item.title}</h3>
+
                 <p>{item.desc}</p>
               </div>
+
             </div>
           ))}
+
         </div>
 
       </section>
@@ -131,18 +151,18 @@ const App = () => {
           <div className="contact___left">
             <p><strong>📍 Location:</strong> GB Road, Noida, INDIA</p>
             <p><strong>📞 Phone:</strong> +91 999 888 777</p>
-            <p><strong>✉️ Email:</strong> industry@gmail.com</p>
+            <p><strong>✉️ Email:</strong> shyamaindustries@gmail.com</p>
           </div>
 
           {/* MAP */}
-          <div className="contact-right">
+          <div className="contact___right">
             <iframe
               title="Google Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.124915012361!2d85.31642107525286!3d27.708955976199906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190e9b3eec5f%3A0x58ae4d47734fe5b0!2sKathmandu%20Durbar%20Square!5e0!3m2!1sen!2snp!4v1717331443991!5m2!1sen!2snp"
               width="100%"
               height="300"
               style={{ border: 0 }}
-              allowFullScreen=""
+              // allowFullScreen=""
               loading="lazy"
             ></iframe>
           </div>
@@ -154,7 +174,7 @@ const App = () => {
 
         <div className="footer__top">
           {/* LOGO */}
-          <div className="footer__logo">Logo</div>
+          <div className="footer__logo">MyLogo</div>
 
           <ul className="footer__nav">
             <li><a href="#home">Home</a></li>

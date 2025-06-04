@@ -12,13 +12,14 @@
 :root {
   --body-color: #fff;
   --black-color: #000;
+  --blue-grey: #1e293b;
   --white-color: #fff;
   --yellow-color: #FDCB35;
   --grey-color: #5D5B56;
-  --blue-grey: #1e293b;
 
   /*======== OPACITY ========*/
   --black-opacity: #0000000d;
+  --pure-black: #1111112a;
 }
 
 /*=============== BODY ===============*/
@@ -47,13 +48,13 @@ body {
 }
 
 /*=============== HEADER ===============*/
-.header {
+header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem 9rem;
+  padding: .9rem 8rem;
   z-index: 999;
 
   &.scrolled {
@@ -86,7 +87,7 @@ body {
     font-weight: 600;
     font-size: 1.1rem;
     border-radius: 2rem;
-    color: var(--black-color);
+    color: var(--blue-grey);
     background-color: var(--yellow-color);
     cursor: pointer;
     transition: opacity .2s ease;
@@ -113,27 +114,27 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    height: 80vh;
+    gap: 2rem;
+    height: 75vh;
 
     .home___left,
     .about___left,
     .contact___left {
       flex: 1;
       min-width: 18.75rem;
-      padding-right: 2.5rem;
-      color: var(--blue-grey);
 
       h1 {
         font-size: 2.25rem;
         margin-bottom: 1.25rem;
         user-select: text;
+        color: var(--blue-grey);
       }
 
       p {
         line-height: 1.6;
         font-size: 1.125rem;
         user-select: text;
+        color: var(--grey-color);
       }
 
       .home___btn {
@@ -143,7 +144,7 @@ body {
         font-weight: 600;
         font-size: 1.1rem;
         border-radius: 2rem;
-        color: var(--black-color);
+        color: var(--blue-grey);
         background-color: var(--yellow-color);
         cursor: pointer;
         transition: opacity 0.2s ease;
@@ -156,7 +157,7 @@ body {
 
     .home___right,
     .about___right,
-    .contact-right {
+    .contact___right {
       flex: 1;
       min-width: 18.75rem;
       display: flex;
@@ -173,60 +174,68 @@ body {
 
 /*=============== PRODUCT ===============*/
 .products___section {
-  padding: 3.75rem 10%;
-}
-
-.products___heading {
-  font-size: 2rem;
+  padding: 3rem 10%;
   text-align: center;
-  margin-bottom: 2.5rem;
-  color: #1e293b;
-}
 
-.products___list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  .products___heading {
+    font-size: 1.75rem;
+    margin-bottom: 5rem;
+    color: var(--blue-grey);
+  }
 
-.product-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-left: 6px solid #3b82f6;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
+  .products___list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
 
-.product-img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-}
+    .product___card {
+      border-radius: 1rem;
+      padding: 1.25rem;
+      width: 15rem;
+      background-color: var(--white-color);
+      box-shadow: 0 4px 12px var(--pure-black);
+      transition: transform .3s ease;
 
-.product-card h3 {
-  font-size: 20px;
-  color: #1f2937;
-  margin-bottom: 8px;
-}
+      &:hover {
+        transform: translateY(-0.3rem);
+      }
 
-.product-card p {
-  color: #475569;
-  font-size: 15px;
+      .product___img {
+        width: 10rem;
+        height: 10rem;
+        object-fit: contain;
+        margin-bottom: .625rem;
+      }
+
+      h3 {
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+        color: var(--blue-grey);
+      }
+
+      p {
+        font-size: 1rem;
+        color: var(--grey-color);
+      }
+    }
+  }
 }
 
 /*=============== CONTACT ===============*/
 .contact___section .contact___left {
   display: grid;
   gap: 2rem;
+
+  strong {
+    color: var(--blue-grey);
+  }
 }
 
 /*=============== FOOTER ===============*/
 footer {
   margin: 1rem;
-  padding: 2.5rem 10% 1rem 10%;
+  padding: 2.5rem 10%;
   border-radius: 1rem;
   color: var(--blue-grey);
   background-color: var(--yellow-color);
@@ -272,26 +281,87 @@ footer {
 }
 
 /*=============== RESPONSIVE ===============*/
-@media (max-width: 768px) {
+@media (max-width: 1123px) {
+
+  /* GLOBAL */
+  .home___section,
+  .about___section,
+  .contact___section,
+  .products___section  {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 1000px) {
 
   /* HEADER */
-  .header nav {
+  header nav {
     display: none;
   }
+}
+
+@media (max-width: 992px) {
 
   /* PRODUCT */
-  .products___list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  .products___section .products___list .product___card {
+    width: calc(50% - 20px);
   }
+}
 
-  .product-card {
-    flex-direction: column;
+@media (max-width: 880px) {
+
+  /* GLOBAL */
+  .home___section,
+  .about___section,
+  .contact___section,
+  .products___section  {
     text-align: center;
-    align-items: center;
-  }
 
-  .product-img {
-    margin-bottom: 10px;
+    .section___heading {
+      margin: 1rem 0 5rem 0;
+    }
+
+    .sec {
+      display: grid;
+      place-items: center;
+      gap: 3rem;
+
+      .home___right {
+        order: -1;
+      }
+    }
+  }
+  
+  .contact___section {text-align: unset;}
+
+  /* .contact___section .sec .contact___right iframe {
+    width: 100%;
+  } */
+}
+
+@media (max-width: 770px) {
+
+  /* FOOTER */
+  footer {
+    display: grid;
+
+    .footer__top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer__nav {
+      flex-direction: column;
+      gap: .9rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* PRODUCT */
+  .products___section .products___list .product___card {
+    width: 100%;
   }
 }
