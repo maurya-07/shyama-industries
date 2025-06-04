@@ -18,7 +18,7 @@ const App = () => {
       image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTqEhYOOR0iP8_JhzGP_RTwyo6zYYHLR00Rb8C1rAJvwe9BecJE-dFronLXtHiajMMuUAAwzIZ_wnj7FY2Cncd_T7MCAjPJDGJOt4CkR5qoXWdmvWfjj_Eu",
     },
     {
-      title: "kkkkk",
+      title: "Boots",
       desc: "Protects feet from sharp objects and heavy materials.",
       image: "https://hi-tec.com/cdn/shop/products/CADE7INWORKBOOT_CH80044M_T_1_352aad81-cd1d-4c89-819d-163204b29036.jpg?v=1676301995&width=2700",
     },
