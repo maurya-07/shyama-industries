@@ -6,6 +6,7 @@ import './index.css';
 
 const App = () => {
 
+  // Demo changes
   const productList = [
     {
       title: "Helmet",
