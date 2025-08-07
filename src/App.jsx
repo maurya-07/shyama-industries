@@ -74,7 +74,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-black">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl py-4' : 'bg-black/60 backdrop-blur-md py-4'
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-black/90 backdrop-blur-sm border-b border-white/20 py-4' : 'bg-black/70 backdrop-blur-sm py-4'
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -94,7 +94,7 @@ const App = () => {
 
             <div className="flex items-center space-x-4">
               {/* Contact Button */}
-              <button className="hidden sm:flex items-center space-x-2 bg-green-500/80 backdrop-blur-sm hover:bg-green-500 text-white px-4 py-2 rounded-lg font-medium transition-all border border-green-500/30">
+              <button className="hidden sm:flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                 <Phone className="w-4 h-4" />
                 <span>WhatsApp</span>
               </button>
@@ -108,7 +108,7 @@ const App = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden mt-4 py-4 border-t border-white/10 bg-black/60 backdrop-blur-xl rounded-lg">
+            <div className="md:hidden mt-4 py-4 border-t border-white/20 bg-black/80 rounded-lg">
               <nav className="flex flex-col space-y-3 px-4">
                 <a href="#home" onClick={closeMenu} className="text-gray-300 hover:text-orange-400 font-medium">Home</a>
                 <a href="#about" onClick={closeMenu} className="text-gray-300 hover:text-orange-400 font-medium">About</a>
@@ -142,11 +142,11 @@ const App = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="flex items-center justify-center space-x-2 bg-orange-500/90 backdrop-blur-sm hover:bg-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all border border-orange-500/30 shadow-lg">
+                <button className="flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors shadow-lg">
                   <Phone className="w-5 h-5" />
                   <span>Get Quote</span>
                 </button>
-                <button className="flex items-center justify-center space-x-2 border-2 border-white/20 hover:border-orange-500/50 bg-white/5 backdrop-blur-sm text-gray-300 hover:text-orange-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all">
+                <button className="flex items-center justify-center space-x-2 border-2 border-white/30 hover:border-orange-500 bg-white/10 text-gray-300 hover:text-orange-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors">
                   <span>View Products</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -176,11 +176,11 @@ const App = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-black/40 backdrop-blur-xl border-t border-white/10">
+        <div className="bg-black/60 border-t border-white/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <div key={index} className="text-center bg-white/5 rounded-xl p-6 border border-white/20">
                   <div className="flex justify-center mb-4">
                     <stat.icon className="w-8 h-8 text-orange-400" />
                   </div>
@@ -198,7 +198,7 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-4 border border-white/10 shadow-2xl">
+              <div className="bg-white/5 rounded-2xl p-4 border border-white/20">
                 <img
                   src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="About Us"
@@ -221,11 +221,11 @@ const App = () => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="space-y-2 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                <div className="space-y-2 bg-white/5 rounded-lg p-4 border border-white/20">
                   <h3 className="text-xl font-semibold text-white">Quality Assured</h3>
                   <p className="text-gray-400">All products meet international safety standards</p>
                 </div>
-                <div className="space-y-2 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
+                <div className="space-y-2 bg-white/5 rounded-lg p-4 border border-white/20">
                   <h3 className="text-xl font-semibold text-white">Expert Support</h3>
                   <p className="text-gray-400">24/7 technical assistance and consultation</p>
                 </div>
@@ -247,14 +247,14 @@ const App = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productList.map((product, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden hover:shadow-2xl hover:bg-white/15 transition-all duration-300 group">
+              <div key={index} className="bg-white/10 rounded-2xl border border-white/30 shadow-xl overflow-hidden hover:bg-white/15 transition-all duration-300 group">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-4 left-4 bg-orange-500/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium border border-orange-500/30">
+                  <div className="absolute top-4 left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {product.category}
                   </div>
                 </div>
@@ -268,7 +268,7 @@ const App = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-4">{product.desc}</p>
-                  <button className="w-full bg-orange-500/90 backdrop-blur-sm hover:bg-orange-500 text-white py-3 rounded-lg font-medium transition-all border border-orange-500/30">
+                  <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-medium transition-colors">
                     Get Quote
                   </button>
                 </div>
@@ -289,12 +289,12 @@ const App = () => {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Info */}
             <div className="space-y-6 sm:space-y-8">
-              <div className="bg-white/10 backdrop-blur-xl rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
+              <div className="bg-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/30">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Contact Information</h3>
 
                 <div className="space-y-4 sm:space-y-6">
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-orange-500/30">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-orange-400" />
                     </div>
                     <div>
@@ -304,7 +304,7 @@ const App = () => {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-green-500/30">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
                     </div>
                     <div>
@@ -314,7 +314,7 @@ const App = () => {
                   </div>
 
                   <div className="flex items-start space-x-3 sm:space-x-4">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 border border-purple-500/30">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
                     </div>
                     <div>
@@ -328,7 +328,7 @@ const App = () => {
 
             {/* Map */}
             <div className="w-full">
-              <div className="map h-64 sm:h-80 lg:h-82 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white/5 backdrop-blur-xl p-2">
+              <div className="map h-64 sm:h-80 lg:h-82 rounded-xl sm:rounded-2xl overflow-hidden shadow-xl border border-white/30 bg-white/5 p-2">
                 <iframe
                   title="Google Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.124915012361!2d85.31642107525286!3d27.708955976199906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190e9b3eec5f%3A0x58ae4d47734fe5b0!2sKathmandu%20Durbar%20Square!5e0!3m2!1sen!2snp!4v1717331443991!5m2!1sen!2snp"
